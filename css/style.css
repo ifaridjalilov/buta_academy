@@ -1,0 +1,56 @@
+.main-color {
+  background-color: #fff8e1;
+  color: #f47e3e;
+}
+
+a {
+  color: #c14b0b;
+}
+
+a:hover {
+  color: #f47e3e;
+  text-decoration: none;
+}
+
+.navbar {
+  border-bottom: 2px solid #f47e3e;
+}
+.navbar-brand img {
+  width: 100px;
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  background-size: cover;
+}
+
+.carousel-item h4,
+.carousel-item h2 {
+  color: #f47e3e;
+}
+
+#about,
+#services,
+#contact {
+  padding-top: 140px;
+  height: 100vh;
+}
+
+#services h1 {
+  margin-bottom: 50px;
+}
+
+.service-content {
+  background: #fff8e1;
+  padding: 20px;
+  color: #777;
+  border: 2px solid #f47e3e;
+  border-top: 0;
+  min-height: 200px;
+}
+
+.form-control {
+  border: 1px solid #f47e3e;
+}
