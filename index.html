@@ -76,27 +76,48 @@
     <div class="container">
       <h1 class="text-center">Xidmətlərimiz</h1>
       <div class="row">
+
         <div class="col-md-4 mx-auto">
-          <div class="responsive-bg" style="background-image: url(images/services1.png);"></div>
-          <div class="service-content">
-            <p>İngilis dilindən heç anlayışınız yoxdur? Sərfəli və keyfiyyətli, həmçinin qısa zaman ərzində sizə danışıq dilini öyrədəcək kurs axtarırsınız? O zaman narahatçılığa heç bir əsas yoxdur,çünki biz elə sizin arzuladığınız məkanıq</p>
-            <a href="#">Daha çox...</a>
+          <div class="card card-inverse">
+            <img class="card-img" src="images/background.jpg" alt="Rus dili">
+            <div class="card-img-overlay">
+              <h4 class="card-title">Rus dili</h4>
+              <p class="card-text">Rus dilini əgər peşəkarlardan çox qısa müddətə danışaraq öyrənmək istəyirsinizsə,o zaman axtardığınız ünvan elə buradır - Buta Academy.Burada siz təkcə rus dili dərslərində deyil,həm də rus dilində təşkil olunan gündəlik danışıq klublarında iştirak etmək şansını qazanırsınız</p>
+              <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+            </div>
           </div>
         </div>
         <div class="col-md-4 mx-auto">
-          <div class="responsive-bg" style="background-image: url(images/service2.jpg);"></div>
-          <div class="service-content">
-            <p>Əgər siz də uşaqlarınızın kiçik yaşdan etibarən ingilis dilində danışmağını istəyirsinizsə, o zaman bizə müraciət edin. Buta Academy yolunuzu gözləyir. Qeydiyyatdan keçməyə tələsin!</p>
-            <a href="#">Daha çox...</a>
+          <div class="card card-inverse">
+            <img class="card-img" src="images/background.jpg" alt="Rus dili">
+            <div class="card-img-overlay">
+              <h4 class="card-title">Rus dili</h4>
+              <p class="card-text">Rus dilini əgər peşəkarlardan çox qısa müddətə danışaraq öyrənmək istəyirsinizsə,o zaman axtardığınız ünvan elə buradır - Buta Academy.Burada siz təkcə rus dili dərslərində deyil,həm də rus dilində təşkil olunan gündəlik danışıq klublarında iştirak etmək şansını qazanırsınız</p>
+              <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+            </div>
           </div>
         </div>
         <div class="col-md-4 mx-auto">
-          <div class="responsive-bg" style="background-image: url(images/service3.jpg);"></div>
-          <div class="service-content">
-            <p>İlk dəfə olaraq dil kursları olaraq MACMİLLAN üsulu ilə ilk dərsdən ingilis dilini danışaraq öyrənmə fürsətini yalnız biz sizə veririk!!! </p>
-            <a href="#">Daha çox...</a>
+          <div class="card card-inverse">
+            <img class="card-img" src="images/background.jpg" alt="Rus dili">
+            <div class="card-img-overlay">
+              <h4 class="card-title">Rus dili</h4>
+              <p class="card-text">Rus dilini əgər peşəkarlardan çox qısa müddətə danışaraq öyrənmək istəyirsinizsə,o zaman axtardığınız ünvan elə buradır - Buta Academy.Burada siz təkcə rus dili dərslərində deyil,həm də rus dilində təşkil olunan gündəlik danışıq klublarında iştirak etmək şansını qazanırsınız</p>
+              <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+            </div>
           </div>
         </div>
+        <div class="col-md-4 mx-auto">
+          <div class="card card-inverse">
+            <img class="card-img" src="images/background.jpg" alt="Rus dili">
+            <div class="card-img-overlay">
+              <h4 class="card-title">Rus dili</h4>
+              <p class="card-text">Rus dilini əgər peşəkarlardan çox qısa müddətə danışaraq öyrənmək istəyirsinizsə,o zaman axtardığınız ünvan elə buradır - Buta Academy.Burada siz təkcə rus dili dərslərində deyil,həm də rus dilində təşkil olunan gündəlik danışıq klublarında iştirak etmək şansını qazanırsınız</p>
+              <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -154,7 +175,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/scrolling-nav.js"></script>
-<!--   <script>
+  <script>
       function initMap() {
         var uluru = {lat: 55.83963, lng: -5.06264};
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -166,9 +187,30 @@
           map: map
         });
       }
+
+      var e = 0;
+      function showService() {
+        var a;
+        a = $("#services .row .card-img-overlay").eq(e);
+        a.css("opacity", 1);
+        setTimeout(function () {
+          a.css("opacity", 0);
+        }, 3000);
+        if (e <= 2 && e >= 0) {
+          e++;
+        } else {
+          e = 0;
+        }
+      }
+      showService();
+      setInterval(showService, 3000);
+
+      // $("#services .row .card-img-overlay").hover(function() {
+      //   $(this)css("opacity", 1);
+      // });
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChuy_ev0pR_uQaZDSPpZKu0x8YEiDZvdI&callback=initMap">
-    </script> -->
+    </script>
 </body>
 </html>
